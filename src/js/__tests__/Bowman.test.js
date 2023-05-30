@@ -50,3 +50,9 @@ test('check Bowman error damage', () => {
     gamer.damage(15);
   }).toThrowError('персонаж умер');
 });
+
+test('check Bowman error name', () => {
+  expect(() => {
+    const gamer = new Bowman('g');
+  }).toThrowError('некорректное имя');
+});
